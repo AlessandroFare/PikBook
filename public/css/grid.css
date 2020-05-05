@@ -145,12 +145,12 @@ header {
 
 @media (max-width: 750px) {
 	.single_wrap {
-		width: 420px;
+		width: 400px;
 		max-width: 100%;
 	}
 
 	.tweet_card {
-		max-width: 400px;
+		max-width: 380px;
 	}
 
 	.tweet_text .tweet_textarea {
@@ -181,7 +181,7 @@ header {
 	}
 
 	.double_wrap {
-		width: 440px;
+		width: 400px;
 		max-width: 100%;
 		grid-template-columns: auto;
 		grid-template-rows: auto auto;
