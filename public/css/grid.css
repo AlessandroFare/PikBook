@@ -118,7 +118,7 @@ header {
 	.wrapper {
 		display: grid;
 		margin: 0 auto;
-		width: 480px;
+		
 		height: fit-content;
 		width: 100%;
 		grid-template-columns: auto;
@@ -153,11 +153,11 @@ header {
 @media screen and (max-width: 600px) {
 	.single_wrap {
 		width: 320px;
-		max-width: 100%;
+		
 	}
 
 	.tweet_card {
-		max-width: 300px;
+		max-width: 320px;
 	}
 
 	.tweet_text .tweet_textarea {
@@ -166,6 +166,7 @@ header {
 		min-height: 75px;
 	}
 
+	
 	.single_wrap .tweet_button {
 		margin-left: 0;
 		margin-left: .6em;
@@ -198,11 +199,11 @@ header {
 
 	.single_content {
 		width: 270px;
-		max-width: 100%;
+		
 	}
 
 	.single_content .tweet_text {
-		width: 130px;
+		width: 150px;
 	}
 
 	.single_content img.the_image {
@@ -210,6 +211,7 @@ header {
 		max-height: 130px;
 		
 	}
+	
 	.single_content .tweet_card {
 		width: 270px;
 	}
