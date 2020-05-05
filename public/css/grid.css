@@ -221,6 +221,14 @@ header {
 	.image_upload + label {
 		font-size: .7em;
 	}
+
+	.footer {
+		width: auto;
+	}
+
+	.wrapper {
+		width: auto;
+	}
 }
 
 @media (max-width: 700px) {
