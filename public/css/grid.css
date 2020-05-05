@@ -1,0 +1,253 @@
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+	background-color: #e7eba9;
+	margin: 0;
+}
+
+.wrapper {
+	width: 1000px;
+	max-width: 100%;
+	margin: 0 auto;
+	/* padding: 10px; */
+	display: grid;
+	grid-template-columns: 25% 75%;
+
+}
+
+header {
+	border-bottom: solid #ff7f34 .1em;
+}
+.double_content {
+	width: 1000px;
+	max-width: 100%;
+	margin: 0 auto;
+	/* padding: 10px; */
+	display: grid;
+	grid-template-columns: 25% 600px;
+	background-color: #ffffff;
+}
+
+
+.single_wrap {
+	width: 700px;
+	max-width: 100%;
+	margin: 5em auto 8.7em auto;
+	background-color: #ffffff;
+	padding: 20px 0 20px 10px;
+	border-radius: 8px;
+}
+
+.double_wrap {
+	width: 750px;
+	max-width: 100%;
+	margin: 0 auto;
+	background-color: #ffffff;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-column-gap: 10px;
+	padding: 30px 0 20px 5px;
+	border-radius: 20px;
+}
+
+.single_content {
+	width: 500px;
+	max-width: 100%;
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+
+.single_content .tweet_card {
+	width: 450px;
+}
+
+.tweet_textarea {
+	min-height: 150px;
+}
+
+.tweet_text .tweet_textarea {
+	max-width: 450px;
+}
+.single_content .tweet_textarea {
+	max-width: 350px;
+}
+.content {
+	/* display: grid;
+	grid-template-columns: 25% 70%; */
+	
+}
+
+.tweetcenter {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Tweet card grid  */
+.tweet_card {
+	display: grid;
+	grid-template-columns: 85px auto;
+}
+
+.single_wrap h1 {
+	text-align: center;
+}
+
+.single_wrap .form {
+	text-align: center;
+}
+
+.single_wrap .form input {
+	margin: 1em auto;
+}
+
+.single_wrap .form .textareabio {
+	display: block;
+	margin: 0 auto;
+}
+
+.single_wrap .tweet_button {
+	margin-left: 1.2em;
+}
+
+@media (max-width: 1000px) {
+	.wrapper {
+		display: grid;
+		margin: 0 auto;
+		width: 700px;
+		height: fit-content;
+		width: 100%;
+		grid-template-columns: auto;
+		grid-template-rows: 10% 90%;
+		row-gap: 3em;
+		grid-template-areas: 
+            "title"
+			"form_inline";
+    }
+	
+	.site_title {
+		grid-area: title;
+		text-align: center;
+	}
+
+	.wrapper .form_inline {
+		grid-area: form_inline;
+		text-align: center;
+	}
+   
+	.accountmenu {
+		grid-area: form_inline;
+		text-align: center;
+	}
+}
+
+@media (max-width: 750px) {
+	.single_wrap {
+		width: 420px;
+		max-width: 100%;
+	}
+
+	.tweet_card {
+		max-width: 400px;
+	}
+
+	.tweet_text .tweet_textarea {
+		max-width: 250px;
+		min-height: 75px;
+	}
+
+	.single_wrap .tweet_button {
+		margin-left: 0;
+		margin-left: .6em;
+	}
+
+	.single_wrap .tweet_hover .tweet_text {
+		margin-right: 4em;
+	}
+
+	.the_image {
+		max-width: 200px;
+		max-height: 200px;
+	}
+
+	img.the_singleimage {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 200px;
+		max-height: 200px;
+	}
+
+	.double_wrap {
+		width: 440px;
+		max-width: 100%;
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+		grid-row-gap: 20px;
+	}
+
+	.single_content {
+		width: 300px;
+		max-width: 100%;
+	}
+
+	.single_content .tweet_text {
+		width: 160px;
+	}
+
+	.single_content img.the_image {
+		max-width: 160px;
+		max-height: 160px;
+		
+	}
+	.single_content .tweet_card {
+		width: 300px;
+	}
+	.single_content .tweet_textarea {
+		max-width: 150px;
+	}
+
+	img.profile_avatar {
+		max-width: 75px;
+		max-height: 75px;
+	}
+
+	.image_upload + label {
+		font-size: .7em;
+	}
+}
+
+@media (max-width: 700px) {
+	
+	
+	.site_title {
+		text-align: center;
+	}
+
+	
+	header .wrapper .form_inline {
+		display: grid;
+		text-align: center;
+		max-width: 200px;
+		margin: 0 auto;
+		grid-template-columns: auto;
+		grid-template-rows: repeat(4,30px);
+		row-gap: .5em;
+	}
+	
+	.wrapper .form_inline .button {
+		margin: 0 auto;
+		max-width: 80px;
+	}
+	
+	.wrapper .form_inline input {
+		margin: 0 auto;
+		max-width: 150px;
+	}
+
+	.email label {
+		margin-top: 1em;
+	}
+}

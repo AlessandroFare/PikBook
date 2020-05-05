@@ -1,0 +1,2 @@
+PikBook is a social network based on sharing images.
+It allows users to create photo books where they can share personal projects.

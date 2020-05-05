@@ -1,0 +1,12 @@
+mixin loginForm()
+	
+	form.form_inline(action='/login' method='POST')
+		span.reg
+			strong
+				a(href="/register") Register
+		span.reg  Or 
+		label.email(for='email') Email:
+		input.email(type='email' name='email')
+		label.pass(for='password') Password:
+		input.pass(type='password' name='password' )
+		input.sign(type='submit' class='button' value='Sign In')
