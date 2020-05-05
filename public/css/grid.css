@@ -145,7 +145,7 @@ header {
 	}
 }
 
-@media (max-width: 750px) {
+@media screen and (max-width: 600px) {
 	.single_wrap {
 		width: 320px;
 		max-width: 100%;
