@@ -13,7 +13,8 @@ const dotenv = require('dotenv');
 dotenv.config({ path: 'variables.env' });
 
 // Mongoose
-mongoose.connect(process.env.DATABASE);
+mongoose.connect(process.env.DATABASE,  {useNewUrlParser: true, useUnifiedTopology: true} );
+mongoose.set('useCreateIndex', true);
 mongoose.Promise = global.Promise;
 mongoose.connection.on('error', (err) => {
 	console.log('We have an error with the database: ' + err);
