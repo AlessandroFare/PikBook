@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const promisify = require('es6-promisify');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const passport = require('passport');
@@ -15,16 +14,16 @@ dotenv.config({ path: 'variables.env' });
 // Mongoose
 mongoose.connect(process.env.DATABASE,  {useNewUrlParser: true, useUnifiedTopology: true} );
 mongoose.set('useCreateIndex', true);
-mongoose.Promise = global.Promise;
+
 mongoose.connection.on('error', (err) => {
 	console.log('We have an error with the database: ' + err);
 })
 
 // Express session
 app.use(session({
-	secret: process.env.SECRET,
+	secret: "something",
 	resave: false,
-	saveUninitialized: true
+	saveUninitialized: false
   }))
 
 // Passport.js
