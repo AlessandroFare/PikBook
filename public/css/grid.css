@@ -147,17 +147,17 @@ header {
 
 @media (max-width: 750px) {
 	.single_wrap {
-		width: 350px;
+		width: 320px;
 		max-width: 100%;
 	}
 
 	.tweet_card {
-		max-width: 330px;
+		max-width: 300px;
 	}
 
 	.tweet_text .tweet_textarea {
-		max-width: 200px;
-		min-width: 200px;
+		max-width: 170px;
+		min-width: 170px;
 		min-height: 75px;
 	}
 
@@ -184,7 +184,7 @@ header {
 	}
 
 	.double_wrap {
-		width: 350px;
+		width: 320px;
 		max-width: 100%;
 		grid-template-columns: auto;
 		grid-template-rows: auto auto;
@@ -192,21 +192,21 @@ header {
 	}
 
 	.single_content {
-		width: 300px;
+		width: 270px;
 		max-width: 100%;
 	}
 
 	.single_content .tweet_text {
-		width: 160px;
+		width: 130px;
 	}
 
 	.single_content img.the_image {
-		max-width: 160px;
-		max-height: 160px;
+		max-width: 130px;
+		max-height: 130px;
 		
 	}
 	.single_content .tweet_card {
-		width: 300px;
+		width: 270px;
 	}
 	.single_content .tweet_textarea {
 		max-width: 150px;
