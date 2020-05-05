@@ -24,16 +24,15 @@
     "validator": "^10.2.0"
   },
   "engines": {
-    "node": "0.10.11",
-    "npm": "1.2.25"
+    "node": "v12.16.1",
+    "npm": "6.13.4"
   },
   "devDependencies": {
     "nodemon": "^1.18.3"
   },
   "scripts": {
     "start": "node ./app.js",
-    "dev": "nodemon ./app.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install npm && run build"
+    "dev": "nodemon ./app.js"
   },
   "now": {
     "dotenv": "variables.env.now"
