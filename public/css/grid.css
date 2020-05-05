@@ -152,6 +152,9 @@ header {
 		
 	}
 
+	.single_wrap .form .textareabio {
+		max-width: 200px;
+	}
 	.tweet_card {
 		max-width: 300px;
 	}
