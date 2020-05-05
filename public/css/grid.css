@@ -145,8 +145,8 @@ header {
 	}
 
 	header, body, .footer, .content_area {
-		width: auto;
-		width: 100%;
+		width: 480px;
+		
 	}
 
 }
