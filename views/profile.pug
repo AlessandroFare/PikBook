@@ -15,7 +15,7 @@ block content
 				if (reqUser._id.toString() == user._id.toString())
 					p
 						a.profile_edit(href='/account') Edit your profile
-					//-a(href=`/deleteaccount/${reqUser.username}`) Delete
+				a(href=`/deleteaccount/${reqUser.username}`) Delete account
 		.feed_section.single_content
 			if user 
 				+tweetForm()

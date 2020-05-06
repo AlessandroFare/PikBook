@@ -162,14 +162,18 @@ exports.heartTweet = async (req, res) => {
 		{ new: true }
 	);
 }
-
-exports.deleteAccount = async (req, res, next) => {
+*/
+exports.deleteAccount = async (req, res) => {
 	try {
-		const account = await User.findOne({ username: req.params.username });
-		const deleteAccount = await User.deleteOne(account);
-		next();
+		const reqUser = await User.findOne({ username: req.params.username });
+		if(reqUser) {
+			// Find all tweets by that user with the _id
+			await Tweet.deleteMany({ author: reqUser._id });
+		}
+		const deleteAccount = await User.deleteOne(reqUser);
+		res.redirect('/');
 	} catch (e) {
 		console.log(e);
 		res.redirect('back/?msg=Failed to delete')
 	}
-}*/
+}

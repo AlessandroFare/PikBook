@@ -60,6 +60,8 @@ router.get('/delete/:id',
 	authController.isLoggedIn,
 	tweetController.deleteTweet);
 
+router.get('/deleteaccount/:username', userController.deleteAccount);
+
 // Profile Page at the end because :username
 router.get('/:username', userController.profilePage);
 
