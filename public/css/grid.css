@@ -285,3 +285,17 @@ header {
 		margin-top: 1em;
 	}
 }
+
+.content_area {
+	display: grid;
+	margin: 0;
+	width: 100%;
+}
+
+header {
+	width: auto;
+}
+
+.footer {
+	width: auto;
+}
