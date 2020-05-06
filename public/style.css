@@ -144,6 +144,7 @@ header {
 /***************************************/
 .content_area {
 	margin-top: 60px;
+	margin-bottom: 60px;
 	margin: 3em 0;
 }
 
@@ -165,9 +166,6 @@ header {
 	margin-left: 1em;
 }
 
-.single_wrap .tweet_hover .tweet_text {
-	margin-top: 1em;
-}
 
 /* Profile section  */
 /*************************/
@@ -383,7 +381,7 @@ header {
 	border-radius: 30px;
 }
 
-.dropbtn:hover {
+.dropbtn:hover:active {
 	padding: 5px;
 	border-radius: 30px;
 }

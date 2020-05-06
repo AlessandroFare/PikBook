@@ -35,9 +35,9 @@ header {
 .single_wrap {
 	width: 700px;
 	max-width: 100%;
-	margin: 5em auto 8.7em auto;
+	margin: 5em auto;
 	background-color: #ffffff;
-	padding: 20px 0 20px 10px;
+	padding: 20px 10px;
 	border-radius: 8px;
 }
 
@@ -49,7 +49,7 @@ header {
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-column-gap: 10px;
-	padding: 30px 0 20px 5px;
+	padding: 30px 5px 20px 5px;
 	border-radius: 20px;
 }
 
@@ -90,7 +90,8 @@ header {
 /* Tweet card grid  */
 .tweet_card {
 	display: grid;
-	grid-template-columns: 85px auto;
+	margin: 0 auto;
+	grid-template-columns: 80px auto;
 }
 
 .single_wrap h1 {
@@ -148,13 +149,14 @@ header {
 
 @media screen and (max-width: 600px) {
 	.single_wrap {
-		width: 300px;
+		width: 310px;
 		
 	}
 
 	.single_wrap .form .textareabio {
 		max-width: 200px;
 	}
+
 	.tweet_card {
 		max-width: 300px;
 	}
@@ -168,12 +170,9 @@ header {
 	
 	.single_wrap .tweet_button {
 		margin-left: 0;
-		margin-left: .6em;
 	}
 
-	.single_wrap .tweet_hover .tweet_text {
-		margin-right: 4em;
-	}
+	
 
 	.the_image {
 		max-width: 180px;
@@ -196,14 +195,29 @@ header {
 		grid-row-gap: 20px;
 	}
 
+	.tweetform {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: 20% 80%;
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.double_wrap .single_content .tweetform {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: 20% 80%;
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+	}
+
 	.single_content {
 		width: 250px;
 		
 	}
 
-	.single_content .tweet_text {
-		width: 140px;
-	}
 
 	.single_content img.the_image {
 		max-width: 140px;
@@ -211,13 +225,15 @@ header {
 		
 	}
 
+	.double_wrap .single_content .tweetform .tweet_text {
+		display: block;
+		margin: 2em auto 0 auto;
+	}
+
 	.single_content .tweet_card {
 		width: 250px;
 	}
-	.single_content .tweet_textarea {
-		max-width: 130px;
-		min-width: 130px;
-	}
+	
 
 	img.profile_avatar {
 		max-width: 75px;
@@ -228,6 +244,10 @@ header {
 		font-size: .7em;
 	}
 
+
+	.single_wrap .tweetform .tweet_text {
+		margin-top: 2em;
+	}
 }
 
 @media (max-width: 700px) {

@@ -22,9 +22,10 @@ mixin tweetCard(tweet={})
 			p.tweet_meta
 				span 
 					a(href=`/tweet/${tweet._id}` title=`${tweet.created}`) #{moment(tweet.created).fromNow()}
-				if user && (tweet.author.equals(user._id) || user.username == 'ale14798')
-					span  &middot;
-					a(href=`/delete/${tweet._id}`) Delete
 				span.like
 					i.fas.fa-heart
 					span.tweetstatscount 0
+				if user && (tweet.author.equals(user._id) || user.username == 'ale14798')
+					br
+					span &middot;&nbsp;
+					a(href=`/delete/${tweet._id}`) Delete
