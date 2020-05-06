@@ -153,7 +153,6 @@ header {
 @media screen and (max-width: 600px) {
 	.single_wrap {
 		width: 310px;
-		
 	}
 
 	.single_wrap .form .textareabio {
@@ -175,8 +174,13 @@ header {
 		margin-left: 0;
 	}
 
-	
+	.single_wrap .tweet_card .tweet_text .tweet_meta {
+		margin-left: 1.5em;
+	}
 
+	.double_wrap .tweet_card .tweet_text .tweet_meta {
+		margin-left: .5em;
+	}
 	.the_image {
 		max-width: 190px;
 		max-height: 190px;
@@ -188,6 +192,9 @@ header {
 		margin-right: auto;
 		max-width: 180px;
 		max-height: 180px;
+	}
+	.single_wrap .single_tweet .tweet_meta {
+		text-align: center;
 	}
 
 	.double_wrap {
@@ -217,14 +224,14 @@ header {
 	}
 
 	.single_content {
-		width: 250px;
+		width: 280px;
 		
 	}
 
 
 	.single_content img.the_image {
-		max-width: 140px;
-		max-height: 140px;
+		max-width: 160px;
+		max-height: 160px;
 		
 	}
 
@@ -309,5 +316,9 @@ header {
 	.double_wrap .single_content .tweet_card .tweet_text .the_image {
 		display: block;
 		margin: 2em auto;
+	}
+
+	.tweet_meta {
+		text-align: center;
 	}
 }

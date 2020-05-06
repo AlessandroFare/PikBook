@@ -25,7 +25,11 @@ mixin tweetCard(tweet={})
 				span.like
 					i.fas.fa-heart
 					span.tweetstatscount 0
+				a.download_image(href=`/uploads/${tweet.avatar}`, download='')
+					i.fas.fa-download
 				if user && (tweet.author.equals(user._id) || user.username == 'ale14798')
+					br
 					br
 					span &middot;&nbsp;
 					a(href=`/delete/${tweet._id}`) Delete
+					span &nbsp;&middot;
