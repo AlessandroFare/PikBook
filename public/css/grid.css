@@ -18,6 +18,9 @@ body {
 
 }
 
+.tweet_hover .tweet_text {
+	margin-top: 1em;
+}
 header {
 	border-bottom: solid #ff7f34 .1em;
 }
@@ -90,8 +93,8 @@ header {
 /* Tweet card grid  */
 .tweet_card {
 	display: grid;
-	margin: 0 auto;
-	grid-template-columns: 80px auto;
+	margin: .5em auto;
+	grid-template-columns: 85px auto;
 }
 
 .single_wrap h1 {
@@ -112,7 +115,7 @@ header {
 }
 
 .single_wrap .tweet_button {
-	margin-left: 1.2em;
+	margin-left: 1.6em;
 }
 
 @media (max-width: 1000px) {
