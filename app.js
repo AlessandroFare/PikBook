@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const expressValidator = require('express-validator');
 const MemoryStore = require('memorystore')(session)
 const routes = require('./routes');
+const favicon = require('express-favicon');
+
 require('./handlers/passport');
 const dotenv = require('dotenv');
 // Dot Env
@@ -42,7 +44,7 @@ app.set('view engine', 'pug');
 // Public folder
 app.use(express.static(__dirname + '/public'));
 app.use('/uploads', express.static(__dirname + '/public'));
-
+app.use(favicon(__dirname + '/public/favicon.png'));
 // Body Parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
