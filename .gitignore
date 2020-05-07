@@ -1,5 +1,5 @@
 node_modules/
-!public/uploads/*
+public/uploads/*
 logs
 *.log
 variables.env

@@ -5,30 +5,27 @@ const session = require('express-session');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const expressValidator = require('express-validator');
-const MemoryStore = require('memorystore')(session)
 const routes = require('./routes');
 const favicon = require('express-favicon');
+const promisify = require('es6-promisify');
 
 require('./handlers/passport');
-const dotenv = require('dotenv');
+
 // Dot Env
-dotenv.config({ path: 'variables.env' });
+require('dotenv').config({ path: 'variables.env' });
 
 // Mongoose
 mongoose.connect(process.env.DATABASE,  {useNewUrlParser: true, useUnifiedTopology: true} );
 mongoose.set('useCreateIndex', true);
-
+mongoose.set("autoIndex", false);
+mongoose.Promise = global.Promise;
 mongoose.connection.on('error', (err) => {
 	console.log('We have an error with the database: ' + err);
 })
 
 // Express session
 app.use(session({
-	cookie: { maxAge: 86400000 },
-    store: new MemoryStore({
-      checkPeriod: 86400000 // prune expired entries every 24h
-    }),
-	secret: "something",
+	secret: process.env.SECRET,
 	resave: false,
 	saveUninitialized: false
   }))
