@@ -5,6 +5,7 @@ const session = require('express-session');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const expressValidator = require('express-validator');
+const MemoryStore = require('memorystore')(session)
 const routes = require('./routes');
 require('./handlers/passport');
 const dotenv = require('dotenv');
@@ -21,6 +22,10 @@ mongoose.connection.on('error', (err) => {
 
 // Express session
 app.use(session({
+	cookie: { maxAge: 86400000 },
+    store: new MemoryStore({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    }),
 	secret: "something",
 	resave: false,
 	saveUninitialized: false

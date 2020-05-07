@@ -1,7 +1,8 @@
 node_modules/
-!public/uploads/*
+public/uploads/*
 logs
 *.log
 variables.env
 variables.env.now
 !public/uploads/no-avatar.jpg
+!public/uploads/WhatsApp Image 2020-04-30 at 07.50.18.jpeg
