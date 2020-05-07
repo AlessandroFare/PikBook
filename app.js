@@ -7,25 +7,23 @@ const mongoose = require('mongoose');
 const expressValidator = require('express-validator');
 const routes = require('./routes');
 const favicon = require('express-favicon');
-const promisify = require('es6-promisify');
 
 require('./handlers/passport');
 
 // Dot Env
 require('dotenv').config({ path: 'variables.env' });
-
+mongoose.Promise = global.Promise;
 // Mongoose
 mongoose.connect(process.env.DATABASE,  {useNewUrlParser: true, useUnifiedTopology: true} );
 mongoose.set('useCreateIndex', true);
-mongoose.set("autoIndex", false);
-mongoose.Promise = global.Promise;
+
 mongoose.connection.on('error', (err) => {
 	console.log('We have an error with the database: ' + err);
 })
 
 // Express session
 app.use(session({
-	secret: process.env.SECRET,
+	secret: "Something",
 	resave: false,
 	saveUninitialized: false
   }))
