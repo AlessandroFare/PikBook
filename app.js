@@ -16,7 +16,7 @@ mongoose.Promise = global.Promise;
 // Mongoose
 mongoose.connect(process.env.DATABASE,  {useNewUrlParser: true, useUnifiedTopology: true} );
 mongoose.set('useCreateIndex', true);
-
+mongoose.set('useFindAndModify', false)
 mongoose.connection.on('error', (err) => {
 	console.log('We have an error with the database: ' + err);
 })
