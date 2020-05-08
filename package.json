@@ -6,6 +6,7 @@
   "dependencies": {
     "@types/dotenv": "^8.2.0",
     "body-parser": "^1.18.3",
+    "cookie-session": "^1.4.0",
     "dotenv": "^5.0.1",
     "es6-promisify": "^5.0.0",
     "express": "^4.17.1",
