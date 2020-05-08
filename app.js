@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const expressValidator = require('express-validator');
 const routes = require('./routes');
 const favicon = require('express-favicon');
-
+const wakeUpDyno = require("./wokeDyno.js"); // my module!
 require('./handlers/passport');
 
 // Dot Env
@@ -57,6 +57,9 @@ app.use((req, res, next) => {
 app.use('/', routes);
 
 const PORT = process.env.PORT || 3000;
-
+const DYNO_URL = "https://pikbook.herokuapp.com/"; // the url of your dyno
 // Starting the server
-app.listen(PORT, () => console.log('We have a server running on PORT: ' + PORT));
+app.listen(PORT, () => {
+	wakeUpDyno(DYNO_URL); // will start once server starts
+	console.log('We have a server running on PORT: ' + PORT)
+});
