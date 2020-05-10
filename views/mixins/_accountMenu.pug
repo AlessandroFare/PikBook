@@ -3,7 +3,7 @@ mixin accountMenu()
 		a(href=`/${user.username}` class='nav_link') #{(user.name || user.username).split(' ')[0]}
 		.dropdown
 			.dropbtn
-				img.avatar_top(src=`/uploads/${user.avatar || 'no-avatar.jpg'}`) 
+				img.avatar_top(src=`http://res.cloudinary.com/pikbook/image/upload/${user.avatar || 'no-avatar.jpg'}`) 
 			.dropdown-content
 				a(href='/') Home
 				a(href=`/${user.username}`) Your Profile

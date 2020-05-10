@@ -4,6 +4,17 @@ const User = require('../models/User');
 const multer = require('multer');
 const jimp = require('jimp');
 const uuid = require('uuid');
+const cloudinary = require('cloudinary').v2;
+const path = require('path');
+
+
+require('dotenv').config({ path: 'C:/Users/Ale14/OneDrive/Documenti/HTML-CSS-JS/pikbook/.env' });
+
+cloudinary.config({
+	cloud_name: process.env.CLOUD_NAME,
+	api_key: process.env.API_KEY,
+	api_secret: process.env.API_SECRET
+  });
 
 // Home page to list all tweets
 exports.postTweet = async (req, res) => {
@@ -86,12 +97,12 @@ exports.resize = async (req, res, next) => {
 		next();
 		return;
 	}
-
 	const extension = req.file.mimetype.split('/')[1];
 	req.body.avatar = `${uuid.v4()}.${extension}`;
-
 	const image = await jimp.read(req.file.buffer);
 	await image.resize(600, jimp.AUTO).quality(100);
 	await image.writeAsync(`./public/uploads/${req.body.avatar}`);
+	cloudinary.uploader.upload(`./public/uploads/${req.body.avatar}`, {public_id: `${req.body.avatar}`.split('.')[0], format: `${req.body.avatar}`.split('.')[1]}, function(result) { 
+		console.log(result);});
 	next();
 }
