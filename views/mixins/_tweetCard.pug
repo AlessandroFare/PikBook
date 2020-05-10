@@ -2,7 +2,7 @@ mixin tweetCard(tweet={})
 	.tweet_card.tweet_hover
 		.tweet_avatar
 			a(href=`/${tweet.author.username}`)
-				img(src=`http://res.cloudinary.com/pikbook/image/upload/${tweet.author.avatar || 'no-avatar.jpg'}`)
+				img(src=`https://res.cloudinary.com/pikbook/image/upload/${tweet.author.avatar || 'no-avatar.jpg'}`)
 		.tweet_text
 			p.author_name
 				a(href=`/${tweet.author.username}`)
@@ -11,7 +11,7 @@ mixin tweetCard(tweet={})
 			br
 			p.the_tweet #{tweet.tweet}
 			if tweet.avatar
-				img.the_image(src=`http://res.cloudinary.com/pikbook/image/upload/${tweet.avatar}`)
+				img.the_image(src=`https://res.cloudinary.com/pikbook/image/upload/${tweet.avatar}`)
 			p.tweet_actions
 				//-if user
 					form.heart(method='POST' action=`/api/tweets/${tweet._id}/heart`)
@@ -25,7 +25,7 @@ mixin tweetCard(tweet={})
 				span.like
 					i.fas.fa-heart
 					span.tweetstatscount 0
-				a.download_image(href=`http://res.cloudinary.com/pikbook/image/upload/fl_attachment/${tweet.avatar}`, download='')
+				a.download_image(href=`https://res.cloudinary.com/pikbook/image/upload/fl_attachment/${tweet.avatar}`, download='')
 					i.fas.fa-download
 				if user && (tweet.author.equals(user._id) || user.username == 'ale14798')
 					br

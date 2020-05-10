@@ -1,7 +1,7 @@
 mixin tweetForm()
 	form.tweet_card.tweetform(action='/tweet' method='POST' enctype='multipart/form-data')
 		.tweet_avatar
-			img(src=`http://res.cloudinary.com/pikbook/image/upload/${user.avatar || 'no-avatar.jpg'}`)
+			img(src=`https://res.cloudinary.com/pikbook/image/upload/${user.avatar || 'no-avatar.jpg'}`)
 		.tweet_text
 			.tweetcenter
 				textarea(name='tweet' class='tweet_textarea' placeholder='Express yourself..' maxlength="140" rows='3' required)

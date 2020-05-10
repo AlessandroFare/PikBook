@@ -8,6 +8,7 @@ const cloudinary = require('cloudinary').v2;
 const path = require('path');
 
 
+//config cloudinary env variables
 require('dotenv').config({ path: 'C:/Users/Ale14/OneDrive/Documenti/HTML-CSS-JS/pikbook/.env' });
 
 cloudinary.config({
@@ -15,7 +16,7 @@ cloudinary.config({
 	api_key: process.env.API_KEY,
 	api_secret: process.env.API_SECRET
   });
-
+  
 // Home page to list all tweets
 exports.postTweet = async (req, res) => {
 	try {

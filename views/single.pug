@@ -4,7 +4,7 @@ block content
 		.single_tweet
 			p.singletext= tweet.tweet
 			if tweet.avatar
-				img.the_singleimage(src=`http://res.cloudinary.com/pikbook/image/upload/${tweet.avatar}`)
+				img.the_singleimage(src=`https://res.cloudinary.com/pikbook/image/upload/${tweet.avatar}`)
 			p.tweet_meta
 				a(href=`/${tweet.author.username}`)
 					strong #{tweet.author.name || tweet.author.username}
@@ -13,4 +13,4 @@ block content
 				span= moment(tweet.created).fromNow()
 			.tweet_singleavatar
 				a(href=`/${tweet.author.username}`)
-					img(src=`http://res.cloudinary.com/pikbook/image/upload/${tweet.author.avatar || 'no-avatar.jpg'}`)
+					img(src=`https://res.cloudinary.com/pikbook/image/upload/${tweet.author.avatar || 'no-avatar.jpg'}`)

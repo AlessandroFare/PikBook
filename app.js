@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const expressValidator = require('express-validator');
 const routes = require('./routes');
 const favicon = require('express-favicon');
+
+
 require('./handlers/passport');
 
 // Dot Env

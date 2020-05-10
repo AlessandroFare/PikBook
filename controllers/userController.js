@@ -9,13 +9,15 @@ const uuid = require('uuid');
 const cloudinary = require('cloudinary').v2;
 const path = require('path');
 
+
+//config cloudinary env variables
 require('dotenv').config({ path: 'C:/Users/Ale14/OneDrive/Documenti/HTML-CSS-JS/pikbook/.env' });
 
 cloudinary.config({
 	cloud_name: process.env.CLOUD_NAME,
 	api_key: process.env.API_KEY,
 	api_secret: process.env.API_SECRET
-  });
+});
 
 // The default controller for this app
 exports.registerPage = (req, res) => {

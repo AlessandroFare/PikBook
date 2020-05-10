@@ -4,6 +4,6 @@ logs
 *.log
 variables.env
 variables.env.now
+!public/favicon.png
 .env
 .env.now
-!public/favicon.png
