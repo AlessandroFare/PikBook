@@ -2,7 +2,10 @@ mixin tweetCard(tweet={})
 	.tweet_card.tweet_hover
 		.tweet_avatar
 			a(href=`/${tweet.author.username}`)
-				img(src=`https://res.cloudinary.com/pikbook/image/upload/${tweet.author.avatar || 'no-avatar.jpg'}`)
+				if !tweet.author.avatar
+					img(src=`/uploads/no-avatar.jpg`)
+				else
+					img(src=`https://res.cloudinary.com/pikbook/image/upload/${tweet.author.avatar}`)
 		.tweet_text
 			p.author_name
 				a(href=`/${tweet.author.username}`)

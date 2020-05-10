@@ -4,7 +4,10 @@ include mixins/_tweetCard
 block content 
 	.double_wrap
 		.profile_section
-			img.profile_avatar(src=`https://res.cloudinary.com/pikbook/image/upload/${reqUser.avatar || 'no-avatar.jpg'}`)
+			if !reqUser.avatar
+				img.profile_avatar(src=`/uploads/no-avatar.jpg`)
+			else
+				img.profile_avatar(src=`https://res.cloudinary.com/pikbook/image/upload/${reqUser.avatar}`)
 			h2.profile_name #{reqUser.name || reqUser.username}
 			h4 @#{reqUser.username}
 			p.profile_bio #{reqUser.bio || ''}
