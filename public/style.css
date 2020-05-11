@@ -482,10 +482,19 @@ img.the_singleimage {
 	text-decoration: none;
 }
 
+.deleteaccount {
+	color: red;
+}
+
+.deleteaccount:hover {
+	text-decoration: underline;
+}
+
 .profile_edit {
+	color: #FF7F34;
 	text-decoration: none;
-	-webkit-text-stroke-width: 1px;
-	font-size: 1.2rem;
+	-webkit-text-stroke-width: 1.5px;
+	font-size: 1.19rem;
 }
 
 .logo_site {

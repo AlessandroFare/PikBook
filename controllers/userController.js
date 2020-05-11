@@ -59,6 +59,7 @@ exports.accountUpdate = async (req, res) => {
 	try {
 			const updates = {
 			name: req.body.name,
+			username: req.body.username,
 			email: req.body.email,
 			website: req.body.website,
 			bio: req.body.bio,

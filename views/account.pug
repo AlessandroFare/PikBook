@@ -5,6 +5,8 @@ block content
 		form.form(action='/account' method='POST' enctype='multipart/form-data')
 			label(for='name') Name: 
 			input(type='text' name='name' value=user.name)
+			label(for='username') Username: 
+			input(type='text' name='username' value=user.username)
 			label(for='email') Email: 
 			input(type='email' name='email' value=user.email)
 			label(for='website') Website: 
