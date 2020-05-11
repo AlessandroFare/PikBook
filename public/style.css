@@ -484,6 +484,7 @@ img.the_singleimage {
 
 .deleteaccount {
 	color: red;
+	margin-top: 30px;
 }
 
 .deleteaccount:hover {
@@ -491,7 +492,7 @@ img.the_singleimage {
 }
 
 .profile_edit {
-	color: #FF7F34;
+	color: #61c1f8;
 	text-decoration: none;
 	-webkit-text-stroke-width: 1.5px;
 	font-size: 1.19rem;
