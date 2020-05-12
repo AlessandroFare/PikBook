@@ -16,11 +16,12 @@ block content
 					a(href=reqUser.website rel='no_follow' target='_blank')= reqUser.website
 			if user
 				if (reqUser._id.toString() == user._id.toString())
-					p
+					p.editprofile
 						a.profile_edit(href='/account') Edit your profile
-				span &middot;&nbsp;
-				a.deleteaccount(href=`/deleteaccount/${reqUser.username}` onclick="return confirm('Are you sure you want to delete your account?');") Delete account
-				span &nbsp;&middot;
+				.blockdelete
+					span &middot;&nbsp;
+					a.deleteaccount(href=`/deleteaccount/${reqUser.username}` onclick="return confirm('Are you sure you want to delete your account?');") Delete account
+					span &nbsp;&middot;
 		.feed_section.single_content
 			if user 
 				+tweetForm()

@@ -487,17 +487,33 @@ img.the_singleimage {
 	margin-top: 30px;
 }
 
+.double_wrap .profile_section .blockdelete {
+	display: block;
+	margin-top: 2.6em;
+}
+
+.double_wrap .profile_section .editprofile {
+	margin-top: 1.8em;
+}
 .deleteaccount:hover {
 	text-decoration: underline;
 }
 
 .profile_edit {
-	color: #1c8fd1;
+	background-color: rgb(255, 218, 8);
+	color: black;
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 4px 6px;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
 	text-decoration: none;
-	-webkit-text-stroke-width: 1.5px;
-	font-size: 1.19rem;
 }
 
+.profile_edit:hover {
+	background-color: #ffef5e;
+}
 .logo_site {
 	max-width: 35px;
 	max-height: 35px;
