@@ -107,3 +107,15 @@ exports.resize = async (req, res, next) => {
 		console.log(result);});
 	next();
 }
+
+/*
+exports.heartTweet = async (req, res) => {
+	const tweet = await Tweet.findByIdAndUpdate(
+		req.params.id,
+		{ $inc: {likes: 1} },
+		{ new: true }
+	);
+
+	res.send({message: tweet.likes});
+}
+*/

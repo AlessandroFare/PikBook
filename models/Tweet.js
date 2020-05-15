@@ -14,6 +14,13 @@ const tweetSchema = new mongoose.Schema({
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'User'
 	},
-	avatar: String
+	avatar: String,
+
+	/*
+	likes: {
+		type: Number,
+		required: true
+	}
+	*/
 });
 module.exports = mongoose.model('Tweet', tweetSchema);
