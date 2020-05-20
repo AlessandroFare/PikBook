@@ -1,0 +1,6 @@
+extends layout 
+include mixins/_tweetTopCard
+block content
+	.single_wrap
+		each tweet in tweets
+			+tweetTopCard(tweet)

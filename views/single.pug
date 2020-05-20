@@ -11,9 +11,31 @@ block content
 				span  @#{tweet.author.username} 
 				span &middot; 
 				span= moment(tweet.created).fromNow()
+				p.tweet_actions
+					if !(user && (tweet.author.equals(user._id)))
+						button.btn_like(type='button' id="enter" value=`${tweet._id}`)
+							i.fas.fa-heart
+						span#likez #{tweet.likes}
 			.tweet_singleavatar
 				a(href=`/${tweet.author.username}`)
 					if !tweet.author.avatar
 						img(src=`/uploads/no-avatar.jpg`)
 					else
 						img(src=`https://res.cloudinary.com/pikbook/image/upload/${tweet.author.avatar}`)
+	script.
+			$(document).ready(function(){
+				$('#enter').one('click', function(e) {
+					e.preventDefault();
+					$.ajax({
+						type: 'POST',
+						url: `/tweet/` + $(this).val(),
+						success: function(res) {
+							document.getElementById("likez").innerHTML = res.message;
+							$('.btn_like').css("color", "red");
+						},
+						error: function() {
+							console.log('Failed');
+						}
+					});
+				});
+			});

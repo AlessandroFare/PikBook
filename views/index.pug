@@ -2,6 +2,8 @@ extends layout
 include mixins/_tweetForm
 include mixins/_tweetCard
 block content
+	p.editprofiletop
+		a.profile_edittop(href='/top') Top Projects
 	.single_wrap
 		if user 
 			+tweetForm()

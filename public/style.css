@@ -232,15 +232,23 @@ header {
 }
 
 .tweet_actions {
-
+	text-align: center;
 }
 
-.heart {
+#heart {
 	background-color: rgba(255, 255, 255, 0);
 	border: 0;
 	padding: 0;
 	font-size: 1.5rem;
 	cursor: pointer;
+}
+
+.btn_like {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
 }
 
 
@@ -442,7 +450,7 @@ img.the_singleimage {
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
-	margin-top: 1em;
+	
 }
 
 .image_upload {
@@ -537,4 +545,32 @@ img.the_singleimage {
 	margin-left: .6em;
 }
 
+.editprofiletop {
+	text-align: center;
+}
 
+.top {
+	text-align: center;
+}
+.profile_edittop {
+	background-color: rgb(255, 218, 8);
+	color: black;
+	border: 1px solid;
+	border-radius: 10px;
+	padding: 6px;
+	font-size: 2.2rem;
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#likeztop {
+	color: rgb(255, 51, 0);
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-left: .3em;
+}
+
+.fa-crown {
+	color: #212529;
+}

@@ -1,4 +1,4 @@
-mixin tweetCard(tweet={})
+mixin tweetTopCard(tweet={})
 	.tweet_card.tweet_hover
 		.tweet_avatar
 			a(href=`/${tweet.author.username}`)
@@ -23,9 +23,7 @@ mixin tweetCard(tweet={})
 					a(href=`/tweet/${tweet._id}` title=`${tweet.created}`) #{moment(tweet.created).fromNow()}
 				a.download_image(href=`https://res.cloudinary.com/pikbook/image/upload/fl_attachment/${tweet.avatar}`, download='')
 					i.fas.fa-download
-				if user && (tweet.author.equals(user._id) || user.username == 'ale14798')
-					br
-					br
-					span &middot;&nbsp;
-					a(href=`/delete/${tweet._id}`) Delete
-					span &nbsp;&middot;
+				br
+				br
+				i.fas.fa-crown
+				span#likeztop #{tweet.likes}

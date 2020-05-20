@@ -108,14 +108,20 @@ exports.resize = async (req, res, next) => {
 	next();
 }
 
-/*
+
 exports.heartTweet = async (req, res) => {
+	try {
 	const tweet = await Tweet.findByIdAndUpdate(
 		req.params.id,
 		{ $inc: {likes: 1} },
 		{ new: true }
 	);
-
-	res.send({message: tweet.likes});
+	
+	console.log('work');
+	res.send({message: tweet.likes.toString()});
+	}
+	catch (err) {
+		console.log(err);
+		res.redirect('/?msg=No tweets found')
+	}
 }
-*/

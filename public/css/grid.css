@@ -38,7 +38,7 @@ header {
 .single_wrap {
 	width: 700px;
 	max-width: 100%;
-	margin: 5em auto;
+	margin: 3em auto;
 	background-color: #ffffff;
 	padding: 20px 10px;
 	border-radius: 8px;
@@ -118,6 +118,10 @@ header {
 	margin-left: 1.6em;
 }
 
+.tweet_meta {
+	text-align: center;
+}
+
 @media (max-width: 1000px) {
 	.wrapper {
 		display: grid;
@@ -174,13 +178,7 @@ header {
 		margin-left: 0;
 	}
 
-	.single_wrap .tweet_card .tweet_text .tweet_meta {
-		margin-left: 1.5em;
-	}
-
-	.double_wrap .tweet_card .tweet_text .tweet_meta {
-		margin-left: .5em;
-	}
+	
 	.the_image {
 		width: 190px;
 		max-height: auto;

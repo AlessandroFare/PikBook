@@ -16,11 +16,10 @@ const tweetSchema = new mongoose.Schema({
 	},
 	avatar: String,
 
-	/*
+	
 	likes: {
 		type: Number,
 		required: true
 	}
-	*/
 });
 module.exports = mongoose.model('Tweet', tweetSchema);
