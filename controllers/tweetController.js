@@ -117,8 +117,24 @@ exports.heartTweet = async (req, res) => {
 		{ new: true }
 	);
 	
-	console.log('work');
 	res.send({message: tweet.likes.toString()});
+	}
+	catch (err) {
+		console.log(err);
+		res.redirect('/?msg=No tweets found')
+	}
+}
+
+exports.commentTweet = async (req, res) => {
+	try {
+	const comment = req.body.myData;
+	const tweet = await Tweet.findByIdAndUpdate(
+		req.params.id,
+		{ $push: {comments: comment} },
+		{ new: true }
+	);
+	
+	res.send({message: comment});
 	}
 	catch (err) {
 		console.log(err);

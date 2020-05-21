@@ -16,6 +16,15 @@ block content
 						button.btn_like(type='button' id="enter" value=`${tweet._id}`)
 							i.fas.fa-heart
 						span#likez #{tweet.likes}
+				p.comment_actions
+					form.comment(action=`/tweet/${tweet._id}/comment` method='POST' id="commentId")
+						label(for='comment') Add a comment: 
+						input.typecomment(type='text' name='comment' id='idComment')
+						input.typepublish(type='submit' class='button' value='Publish')
+					ul#list 
+						each comments in tweet.comments
+							li= comments 
+								
 			.tweet_singleavatar
 				a(href=`/${tweet.author.username}`)
 					if !tweet.author.avatar
@@ -32,6 +41,28 @@ block content
 						success: function(res) {
 							document.getElementById("likez").innerHTML = res.message;
 							$('.btn_like').css("color", "red");
+						},
+						error: function() {
+							console.log('Failed');
+						}
+					});
+				});
+			});
+
+			$(document).ready(function(){
+				$('#commentId').submit(function(e) {
+					e.preventDefault();
+					$.ajax({
+						type: 'POST',
+						url: `/tweet/` + $('#enter').val() + `/comment`,
+						data: {myData: ($('#idComment').val())},
+						success: function(res) {
+							/*
+							var fullDate = new Date();
+							var twoDigitMonth = ((fullDate.getMonth().length+1) === 1)? (fullDate.getMonth()+1) :(fullDate.getMonth()+1);
+							var currentDate = fullDate.getDate() + "/" + twoDigitMonth + "/" + fullDate.getFullYear()
+							*/
+							$('#list').append('<li>'+res.message+'</li>');
 						},
 						error: function() {
 							console.log('Failed');

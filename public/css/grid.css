@@ -319,4 +319,8 @@ header {
 	.tweet_meta {
 		text-align: center;
 	}
+
+	.comment_actions {
+		text-align: center;
+	}
 }

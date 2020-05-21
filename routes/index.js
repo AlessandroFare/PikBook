@@ -16,8 +16,9 @@ router.get('/tweet/:id', tweetController.singleTweetPage);
 router.get('/top', appController.indexTopPage);
 // API
 ////////////////////////////////
-router.post('/tweet/:id', tweetController.heartTweet)
+router.post('/tweet/:id', tweetController.heartTweet);
 
+router.post('/tweet/:id/comment', tweetController.commentTweet);
 // Registration page
 router.get('/register', userController.registerPage);
 

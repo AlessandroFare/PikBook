@@ -20,6 +20,11 @@ const tweetSchema = new mongoose.Schema({
 	likes: {
 		type: Number,
 		required: true
-	}
+	},
+
+	comments: [{
+		type: String,
+		required: true
+	}]
 });
 module.exports = mongoose.model('Tweet', tweetSchema);

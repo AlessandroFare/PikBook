@@ -52,6 +52,17 @@ textarea {
 	border: 0;
 }
 
+.comment .typecomment{
+	margin: 10px 0;
+	width: 220px;
+	height: 25px;
+	display: block;
+}
+
+.comment .typepublish {
+	font-size: 1.3rem;
+}
+
 .tweet_textarea {
 	/* padding: 5px 7px; */
 	border: 2px solid rgb(255, 218, 8);
