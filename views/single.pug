@@ -37,7 +37,7 @@ block content
 					e.preventDefault();
 					$.ajax({
 						type: 'POST',
-						url: `/tweet/` + $(this).val(),
+						url: `/tweet/` + $(this).val() + `/heart`,
 						success: function(res) {
 							document.getElementById("likez").innerHTML = res.message;
 							$('.btn_like').css("color", "red");
