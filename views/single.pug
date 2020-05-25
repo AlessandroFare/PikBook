@@ -18,7 +18,7 @@ block content
 						span#likez #{tweet.likes}
 				p.comment_actions
 					form.comment(action=`/tweet/${tweet._id}/comment` method='POST' id="commentId")
-						label(for='comment') Add a comment: 
+						label(for='comment') Add a comment
 						input.typecomment(type='text' name='comment' id='idComment')
 						input.typepublish(type='submit' class='button' value='Publish')
 					ul#list 
