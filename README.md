@@ -63,7 +63,7 @@ API_SECRET=your api_secret
 ```
 
 #### These are cloudinary account's variables. You have to create an account on [Cloudinary](https://cloudinary.com/), go to Dashboard, copy your account details and paste into .env file.
-Explain how to run the automated tests for this system
+
 
 ## Run on localhost
 
