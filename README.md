@@ -4,6 +4,10 @@ Full Stack responsive social network made with Node.js, MongoDB, Express.js &amp
 
 * **Demo:** [https://pikbook.herokuapp.com/](https://pikbook.herokuapp.com/)
 
+## Docs
+
+[PikBook_Docs](https://github.com/AlessandroFare/PikBook/blob/master/Docs_PikBook.pdf)
+
 ## Built with:
 
 * [Node.js](https://cloudinary.com/)
